@@ -1,0 +1,57 @@
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton
+
+kb_game = InlineKeyboardButton("Поиграть в игру🎯", callback_data="but_game")
+kb_forec = InlineKeyboardButton("Посмотреть погоду🌦", callback_data="but_weather")
+kb_cat = InlineKeyboardButton("Посмотреть на котика🐱", callback_data="but_cats")
+kb_film = InlineKeyboardButton("Выбрать фильм🗣", callback_data="but_film")
+kb_no = InlineKeyboardButton('Нет👎', callback_data="but_no")
+kb_yes = InlineKeyboardButton("Да👍", callback_data="but_yes")
+kb_stone = InlineKeyboardButton("Камень🤜", callback_data="камень")
+kb_scissors = InlineKeyboardButton("Ножницы✌", callback_data="ножницы")
+kb_paper = InlineKeyboardButton("Бумага✋", callback_data="бумага")
+
+kb1_8 = KeyboardButton("1950-1958")
+kb2_8 = KeyboardButton("1959-1967")
+kb3_8 = KeyboardButton("1968-1976")
+kb4_8 = KeyboardButton("1977-1985")
+kb5_8 = KeyboardButton("1986-1994")
+kb6_8 = KeyboardButton("1995-2003")
+kb7_8 = KeyboardButton("2004-2012")
+kb8_8 = KeyboardButton("2013-2017")
+kb_years = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(kb1_8).add(kb2_8).add(kb3_8).add(
+    kb4_8).add(kb5_8).add(kb6_8).add(kb7_8).add(kb8_8)
+
+kb1 = KeyboardButton("аниме")
+kb2 = KeyboardButton("биография")
+kb3 = KeyboardButton("боевик")
+kb4 = KeyboardButton("военный")
+kb5 = KeyboardButton("детектив")
+kb6 = KeyboardButton("детский")
+kb7 = KeyboardButton("документальный")
+kb8 = KeyboardButton("драма")
+kb9 = KeyboardButton("история")
+kb10 = KeyboardButton("комедия")
+kb11 = KeyboardButton("криминал")
+kb12 = KeyboardButton("мелодрама")
+kb13 = KeyboardButton("мультфильм")
+kb14 = KeyboardButton("мюзикл")
+kb15 = KeyboardButton("приключения")
+kb16 = KeyboardButton("спорт")
+kb17 = KeyboardButton("триллер")
+kb18 = KeyboardButton("ужасы")
+kb19 = KeyboardButton("фантастика")
+kb20 = KeyboardButton("фильм-нуар")
+kb21 = KeyboardButton("фэнтези")
+kb_genres = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(kb1).add(kb2).add(kb3).add(kb4).add(
+    kb5).add(kb6).add(kb7).add(kb8).add(kb9).add(kb10).add(kb11).add(kb12).add(kb13).add(kb14).add(kb15).add(kb16).add(
+    kb17).add(kb18).add(kb19).add(kb20).add(kb21)
+
+kb_gfc = InlineKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(kb_game).add(kb_cat).add(kb_forec)
+kb_gcf = InlineKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(kb_game).add(kb_cat).add(kb_film)
+kb_gffc = InlineKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(kb_game).add(kb_cat).add(kb_forec).add(
+    kb_film)
+kb_yn = InlineKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(kb_yes).add(kb_no)
+kb_ssp = InlineKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(kb_stone).add(kb_scissors).add(kb_paper)
+
+kb_loc = KeyboardButton("Поделиться геопозицией", request_location=True)
+kb_sh_loc = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(kb_loc)
